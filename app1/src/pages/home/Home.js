@@ -1,5 +1,3 @@
-import { Button } from "@carbon/react";
-
 import "./Home.scss";
 
 const Home = () => {
@@ -7,7 +5,7 @@ const Home = () => {
     <div>
       <h1 id="home">home page</h1>    
       <div>
-      <Button>ok button</Button>
+        content
       </div>  
     </div>
   );
