@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
+import { Button } from '@carbon/react';
 
 function App() {
   return (
@@ -17,6 +18,22 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <Button>Hello world</Button>
+       
+    <Button kind="danger">
+        Button
+      </Button>
+      &nbsp;
+      <Button kind="danger--tertiary">
+        Tertiary Danger Button
+      </Button>
+      &nbsp;
+      <Button kind="danger--ghost" >
+        Ghost Danger Button
+      </Button>
+
+        </div>
       </header>
     </div>
   );
