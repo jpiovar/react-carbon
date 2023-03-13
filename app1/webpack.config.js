@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: "./app/entry", // string | object | array
     // Here the application starts executing
@@ -22,3 +24,4 @@ module.exports = {
             }]
       }]
     }
+}
