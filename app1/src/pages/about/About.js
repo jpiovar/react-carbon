@@ -2,7 +2,7 @@ import { Button } from "@carbon/react";
 import React from "react";
 import "./About.scss";
 
-const About = () => {
+var About = () => {
   return (
     <>
     <div>
