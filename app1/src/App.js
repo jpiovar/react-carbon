@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 
 import Home from "./pages/home/Home.js";
 import About from "./pages/about/About.js";
+import React from "react";
 
 function App() {
   return (
