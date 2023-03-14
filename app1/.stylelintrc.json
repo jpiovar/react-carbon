@@ -1,0 +1,135 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "scss/dollar-variable-pattern": "^",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/selector-nest-combinators": "always",
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "font-family-name-quotes": "always-where-recommended",
+    "number-max-precision": 5,
+    "selector-id-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "scss/at-mixin-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "scss/at-function-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/no-global-function-names": true,
+    "no-invalid-position-at-import-rule": null,
+    "scss/double-slash-comment-empty-line-before": [
+      "never",
+      {
+        "ignore": [
+          "between-comments",
+          "stylelint-commands",
+          "inside-block"
+        ]
+      }
+    ],
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": [
+          "Roboto",
+          "password",
+          "Poppins",
+          "Material Icons"
+        ]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "ignore": [
+          "after-comment",
+          "first-nested"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "blockless-after-same-name-blockless",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "inside-block"
+        ]
+      }
+    ],
+    "shorthand-property-no-redundant-values": true,
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "ng-deep"
+        ]
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": [
+          "sticky",
+          "inline-flexbox",
+          "flexbox"
+        ]
+      }
+    ],
+    "alpha-value-notation": "number",
+    "length-zero-no-unit": true,
+    "color-hex-length": "long",
+    "color-function-notation": "legacy",
+    "no-empty-source": null,
+    "no-duplicate-selectors": true,
+    "function-url-quotes": "always",
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": [
+          "appearance",
+          "box-shadow",
+          "transform"
+        ]
+      }
+    ],
+    "selector-pseudo-element-colon-notation": "double",
+    "no-descending-specificity": null,
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-declaration",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "inside-single-line-block"
+        ]
+      }
+    ],
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": [
+          "consecutive-duplicates"
+        ]
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "color-no-invalid-hex": true,
+    "font-family-no-duplicate-names": true,
+    "string-no-newline": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "no-irregular-whitespace": true
+  }
+}
