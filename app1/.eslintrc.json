@@ -1,40 +1,44 @@
 {
-    "settings": {
-       "react": {
-        "version": "detect"
-       }
-    }, 
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "overrides": [
-    ],
-    "parserOptions": {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "root": true,
+  "ignorePatterns": ["src/assets/mock/*"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "ignorePatterns": ["db.js"],
-    "rules": {
+        "sourceType": "module",
+        "createDefaultProgram": true
+      },
+      "plugins": ["react"],
+      
+      "rules": {
         "react/react-in-jsx-scope": "off",
         "indent": ["error", 2],
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
         "linebreak-style": ["error", "unix"],
-        "sort-imports": ["error", {
+        "sort-imports": [
+          "error",
+          {
             "ignoreCase": false,
             "ignoreDeclarationSort": false,
             "ignoreMemberSort": false,
             "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
             "allowSeparatedGroups": false
-        }]
+          }
+        ]
+      }
     }
+  ]
 }
