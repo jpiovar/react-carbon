@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "mock": "json-server --port 3000 --watch ./src/assets/mock/db.js --routes ./src/assets/mock/routes.json --host 0.0.0.0",
+    "mock": "json-server --port 3001 --watch ./src/assets/mock/db.js --routes ./src/assets/mock/routes.json --host 0.0.0.0",
     "project:init": "npm cache clean --force && npm cache verify && npm install",
     "project:legacy": "npm run project:init --legacy-peer-deps"
   },
