@@ -1,7 +1,7 @@
 import { Button } from "@carbon/react";
 import logo from "./assets/images/logo.svg";
 import "./App.scss";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 
 import Home from "./pages/home/Home.js";
 import About from "./pages/about/About.js";
@@ -29,7 +29,7 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">
+                <Link to="/home">
                   <Button>Home</Button>
                 </Link>
               </li>
@@ -41,8 +41,10 @@ function App() {
             </ul>
           </nav>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/" element={<Navigate replace={true} to="/home" />} />
+            <Route path="*" element={<Navigate replace={true} to="/home" />}/>
           </Routes>
         </div>
       </div>
