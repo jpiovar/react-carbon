@@ -1,11 +1,11 @@
+import './App.scss';
+import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import { Button } from '@carbon/react';
 import logo from './assets/images/logo.svg';
-import './App.scss';
-import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
-
-import Home from './pages/home/Home.js';
 import About from './pages/about/About.js';
+import Home from './pages/home/Home.js';
 import React from 'react';
+
 
 function App() {
   return (
