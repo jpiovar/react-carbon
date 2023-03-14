@@ -5,10 +5,10 @@ import "./About.scss";
 var About = () => {
   return (
     <>
-    <div>
-      <h1 id="home">About page</h1>      
-    </div>
-    <Button>ok</Button>
+      <div>
+        <h1 id="home">About page</h1>      
+      </div>
+      <Button>ok</Button>
     </>
   );
 };
