@@ -1,6 +1,6 @@
-import { Button } from "@carbon/react";
-import React from "react";
-import "./About.scss";
+import { Button } from '@carbon/react';
+import React from 'react';
+import './About.scss';
 
 var About = () => {
   return (

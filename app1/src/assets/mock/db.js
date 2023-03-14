@@ -1,4 +1,4 @@
-var home = require("./home");
+var home = require('./home');
 
 module.exports = () => ({
   home: home
