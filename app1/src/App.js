@@ -1,10 +1,12 @@
 import './App.scss';
 import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import { Button } from '@carbon/react';
-import logo from './assets/images/logo.svg';
+
+// eslint-disable-next-line sort-imports
 import About from './pages/about/About.js';
 import Home from './pages/home/Home.js';
 import React from 'react';
+import logo from './assets/images/logo.svg';
 
 
 function App() {
