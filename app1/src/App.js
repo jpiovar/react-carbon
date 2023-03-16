@@ -10,14 +10,22 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserFetch } from 'state/user/user.actions';
+import { startSpinner, stopSpinner } from 'state/spinner/spinner.actions';
 
 function App() {
   const dispatch = useDispatch();
 
   const user = useSelector(state => state.userReducer.user);
+  const spinner = useSelector(state => state.spinnerReducer.isOn);
+
   return (
     <BrowserRouter>
       <div className="app">
+        <div>
+          <button onClick={() => dispatch(startSpinner())}>start spinner</button>
+          <button onClick={() => dispatch(stopSpinner())}>stop spinner</button>
+          <span>spinner: {spinner.isOn}</span>
+        </div>
         <div>
           <button onClick={() => dispatch(getUserFetch({ url: process.env.REACT_APP_USER_URL}))}>get user</button>
           <span>User: {user.name}</span>

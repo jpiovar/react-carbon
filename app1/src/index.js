@@ -10,8 +10,9 @@ import createSagaMiddleware from 'redux-saga';
 import userReducer from './state/user/user.reducers';
 import userSaga from './state/user/user.sagas';
 import { Provider } from 'react-redux';
+import spinnerReducer from 'state/spinner/spinner.reducers';
 
-const rootReducer = combineReducers({userReducer});
+const rootReducer = combineReducers({spinnerReducer, userReducer});
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
 
