@@ -6,14 +6,25 @@ import { Button } from '@carbon/react';
 import About from './pages/about/About.js';
 import Home from './pages/home/Home.js';
 import React from 'react';
-import logo from './assets/images/logo.svg';
+// import logo from './assets/images/logo.svg';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserFetch } from 'state/user/user.actions';
 
 
 function App() {
+  const dispatch = useDispatch();
+
+  const user = useSelector(state => state.userReducer.user);
   return (
     <BrowserRouter>
       <div className="app">
-        <header className="app-header">
+        <div>
+          <button onClick={() => dispatch(getUserFetch())}>get user</button>
+          <span>User: {user.name}</span>
+        </div>
+
+        {/* <header className="app-header">
           <img src={logo} className="app-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -26,8 +37,9 @@ function App() {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
 
+        
         <div>
           <nav>
             <ul>
