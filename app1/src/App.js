@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <div>
-          <button onClick={() => dispatch(getUserFetch({ url: 'http://localhost:3001/user'}))}>get user</button>
+          <button onClick={() => dispatch(getUserFetch({ url: process.env.REACT_APP_USER_URL}))}>get user</button>
           <span>User: {user.name}</span>
         </div>
 
