@@ -11,7 +11,6 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserFetch } from 'state/user/user.actions';
 
-
 function App() {
   const dispatch = useDispatch();
 
@@ -20,7 +19,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <div>
-          <button onClick={() => dispatch(getUserFetch('oo'))}>get user</button>
+          <button onClick={() => dispatch(getUserFetch({ url: 'http://localhost:3001/user'}))}>get user</button>
           <span>User: {user.name}</span>
         </div>
 

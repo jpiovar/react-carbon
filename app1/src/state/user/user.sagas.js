@@ -1,30 +1,27 @@
+/* eslint-disable no-debugger */
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { GET_USER_FETCH, GET_USER_SUCCESS, GET_USER_FAIL } from './user.actions';
 
-/* eslint-disable no-debugger */
-function userFetch(userId) {
+function userFetch(url) {
   debugger;
-  console.log({userId});
-  return fetch('http://localhost:3001/user')
+  console.log({url});
+  return fetch(url)
     .then(response => response.json());
 }
 
-/* eslint-disable no-debugger */
 function* fetchUser(action) {
   debugger;
   console.log({action});
   try {
-    const user = yield call(userFetch, action.a);
+    const user = yield call(userFetch, action.url);
     yield put({type: GET_USER_SUCCESS, user: user});
   } catch (e) {
     yield put({type: GET_USER_FAIL, message: e.message});
   }
 }
 
-/* eslint-disable no-debugger */
-function* userSaga(b) {
+function* userSaga() {
   debugger;
-  console.log({b});
   yield takeEvery(GET_USER_FETCH, fetchUser);
 }
 
