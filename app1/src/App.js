@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <div>
-          <button onClick={() => dispatch(getUserFetch())}>get user</button>
+          <button onClick={() => dispatch(getUserFetch('oo'))}>get user</button>
           <span>User: {user.name}</span>
         </div>
 

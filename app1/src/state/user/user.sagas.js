@@ -10,10 +10,11 @@ function userFetch(userId) {
 }
 
 /* eslint-disable no-debugger */
-function* fetchUser() {
+function* fetchUser(action) {
   debugger;
+  console.log({action});
   try {
-    const user = yield call(userFetch);
+    const user = yield call(userFetch, action.a);
     yield put({type: GET_USER_SUCCESS, user: user});
   } catch (e) {
     yield put({type: GET_USER_FAIL, message: e.message});
@@ -21,8 +22,9 @@ function* fetchUser() {
 }
 
 /* eslint-disable no-debugger */
-function* userSaga() {
+function* userSaga(b) {
   debugger;
+  console.log({b});
   yield takeEvery(GET_USER_FETCH, fetchUser);
 }
 
