@@ -11,3 +11,21 @@ export const getUserFetch = ({ url }) => {
     url
   };
 };
+
+export const getUserSuccess = (user) => {
+  debugger;
+  console.log(user);
+  return {
+    type: GET_USER_SUCCESS,
+    user
+  };
+};
+
+export const getUserFail = (error) => {
+  debugger;
+  console.log({error});
+  return {
+    type: GET_USER_FAIL,
+    //   url
+  };
+};

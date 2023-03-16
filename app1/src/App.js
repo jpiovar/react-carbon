@@ -11,6 +11,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserFetch } from 'state/user/user.actions';
 import { startSpinner, stopSpinner } from 'state/spinner/spinner.actions';
+import { getUserRequest } from 'state/user/user.thunks';
 
 function App() {
   const dispatch = useDispatch();
@@ -26,10 +27,23 @@ function App() {
           <button onClick={() => dispatch(stopSpinner())}>stop spinner</button>
           <span>spinner: {spinner.isOn}</span>
         </div>
+        <br/>
         <div>
+          <p>
+            REDUX-SAGA way
+          </p>
           <button onClick={() => dispatch(getUserFetch({ url: process.env.REACT_APP_USER_URL}))}>get user</button>
           <span>User: {user.name}</span>
         </div>
+        <br/>
+        <div>
+          <p>
+            REDUX-THUNK way
+          </p>
+          <button onClick={() => dispatch(getUserRequest({ url: process.env.REACT_APP_USER_URL}))}>get user</button>
+          <span>User: {user.name}</span>
+        </div>
+        <br/>
 
         {/* <header className="app-header">
           <img src={logo} className="app-logo" alt="logo" />
