@@ -6,7 +6,9 @@ import axios from 'axios';
 // export function getUserRequest({url}) {
 //   debugger;
 //   return function(dispatch) {
+// // return fetch(url)   // fetch way, axios better
 //     return axios.get(url)
+// // .then(user => user.json()) // fetch way needs user.json() and then user, axios needs data
 //       .then(user => dispatch(getUserSuccess(user.data)))
 //       .catch(error => dispatch(getUserFail(error)))
 //       .finally(() => console.log('finally'));

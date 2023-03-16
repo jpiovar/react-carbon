@@ -1,12 +1,15 @@
 /* eslint-disable no-debugger */
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { GET_USER_FETCH, GET_USER_SUCCESS, GET_USER_FAIL } from './user.actions';
+import axios from 'axios';
 
 function userFetch(url) {
   debugger;
   console.log({url});
-  return fetch(url)
-    .then(response => response.json());
+  // return fetch(url)
+  //   .then(response => response.json());
+  return axios.get(url)
+    .then(response => response.data);
 }
 
 function* fetchUser(action) {
