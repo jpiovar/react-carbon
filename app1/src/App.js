@@ -1,11 +1,12 @@
+/* eslint-disable no-debugger */
 import './App.scss';
 import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
-import { Button } from '@carbon/react';
+import { Button, Loading } from '@carbon/react';
 
 // eslint-disable-next-line sort-imports
 import About from './pages/about/About.js';
 import Home from './pages/home/Home.js';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import logo from './assets/images/logo.svg';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,13 +20,24 @@ function App() {
   const user = useSelector(state => state.userReducer.user);
   const spinner = useSelector(state => state.spinnerReducer.isOn);
 
+  const [spinnerLoader, setSpinnerLoader] = useState(false);
+
+  useEffect(() => {
+    debugger;
+    console.log('ok');
+    setSpinnerLoader(spinner);
+  }, [spinner]);
+
   return (
     <BrowserRouter>
       <div className="app">
         <div>
           <button onClick={() => dispatch(startSpinner())}>start spinner</button>
           <button onClick={() => dispatch(stopSpinner())}>stop spinner</button>
-          <span>spinner: {spinner.isOn}</span>
+          <span>spinner: {spinner.toString()} / {spinnerLoader.toString()}</span>
+        </div>
+        <div>
+          {spinnerLoader ? <Loading className={'some-class'} withOverlay={false} /> : <span>loaded</span>}
         </div>
         <br/>
         <div>
