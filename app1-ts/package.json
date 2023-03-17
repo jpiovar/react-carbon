@@ -22,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "project:init": "npm cache clean --force && npm cache verify && npm install",
+    "project:legacy": "npm run project:init --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
