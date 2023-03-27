@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './assets/images/logo.svg';
 import './App.scss';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="app">
       <header className="app-header">
