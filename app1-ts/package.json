@@ -2,6 +2,16 @@
   "name": "app1-ts",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "mock": "json-server --port 3001 --watch ./src/assets/mock/db.js --routes ./src/assets/mock/routes.json --host 0.0.0.0",
+    "project:init": "npm cache clean --force && npm cache verify && npm install",
+    "project:legacy": "npm run project:init --legacy-peer-deps",
+    "stylelint": "stylelint \"**/*.scss\""
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -26,15 +36,6 @@
     "stylelint-scss": "^4.6.0",
     "stylelint-config-standard-scss": "^7.0.1",
     "webpack": "^5.76.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "project:init": "npm cache clean --force && npm cache verify && npm install",
-    "project:legacy": "npm run project:init --legacy-peer-deps",
-    "stylelint": "stylelint \"**/*.scss\""
   },
   "eslintConfig": {
     "extends": [
