@@ -1,5 +1,6 @@
 import './Home.scss';
-
+// import { Button } from '@carbon/react';
+import { Add } from '@carbon/react/icons';
 import React from 'react';
 
 const Home = (): JSX.Element => {
@@ -12,7 +13,8 @@ const Home = (): JSX.Element => {
     <div>
       <h1 id="home">home page</h1>    
       <div>
-        <button onClick={shoot}>content load</button>
+        <Add />
+        <Button onClick={shoot}>content load</Button>
       </div>  
     </div>
   );
