@@ -16,17 +16,18 @@ import thunk from 'redux-thunk'; // to use thunk activate this
 
 const rootReducer = combineReducers({spinnerReducer, userReducer});
 
-// const sagaMiddleware = createSagaMiddleware(); // to use saga activate this
-// const middleware = [sagaMiddleware]; // to use saga activate this
+const sagaMiddleware = createSagaMiddleware(); // to use saga activate this
+const middleware = [sagaMiddleware]; // to use saga activate this
 
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(thunk), // to use thunk activate this
+    // getDefaultMiddleware().concat(thunk), // to use thunk activate this
   // getDefaultMiddleware().concat(middleware), // to use saga activate this
+    getDefaultMiddleware().concat(thunk).concat(middleware) // both usage of thunk way and saga way
 });
 
-// sagaMiddleware.run(userSaga); // to use saga activate this
+sagaMiddleware.run(userSaga); // to use saga activate this
 
 
 const root = ReactDOM.createRoot(

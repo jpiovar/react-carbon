@@ -36,6 +36,7 @@ import axios from 'axios';
 
 // async await, version 3
 export function getUserRequest({url}): any {  
+  debugger;
   return async dispatch => {
     function onSuccess(res): any {
       const r = res.data;
