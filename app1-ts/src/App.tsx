@@ -8,6 +8,8 @@ import { startSpinner, stopSpinner } from './state/spinner/spinner.actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Loading } from 'carbon-components-react';
+import { getUserFetch } from './state/user/user.actions';
+import { getUserRequest } from './state/user/user.thunks';
 
 function App(): JSX.Element {
 
@@ -52,6 +54,26 @@ function App(): JSX.Element {
         <div>
           {spinnerLoader ? <Loading className={'some-class'} withOverlay={false} /> : <span>loaded</span>}
         </div>
+
+
+        <br/>
+        <div>
+          <p>
+            REDUX-SAGA way
+          </p>
+          <button onClick={() => dispatch(getUserFetch({ url: process.env.REACT_APP_USER_URL}))}>get user</button>
+          <span>User: {user.name}</span>
+        </div>
+        <br/>
+        <div>
+          <p>
+            REDUX-THUNK way
+          </p>
+          <button onClick={() => dispatch(getUserRequest({ url: process.env.REACT_APP_USER_URL}))}>get user</button>
+          <span>User: {user.name}</span>
+        </div>
+        <br/>
+
         <div>
           <nav>
             <ul>

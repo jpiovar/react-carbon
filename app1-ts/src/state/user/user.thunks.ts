@@ -35,14 +35,14 @@ import axios from 'axios';
 // }
 
 // async await, version 3
-export function getUserRequest({url}) {  
+export function getUserRequest({url}): any {  
   return async dispatch => {
-    function onSuccess(res) {
+    function onSuccess(res): any {
       const r = res.data;
       dispatch(getUserSuccess(r));
       return r;
     }
-    function onError(error) {
+    function onError(error): any {
       dispatch(getUserFail(error));
       return error;
     }
