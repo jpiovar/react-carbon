@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
       <h1 id="home">home page</h1>    
       <div>
         <Add />
-        <Button onClick={shoot}>content load</Button>
+        <Button onClick={shoot}><Add />content load</Button>
       </div>  
     </div>
   );
