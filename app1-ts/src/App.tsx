@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './assets/images/logo.svg';
 import './App.scss';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 
@@ -36,8 +36,10 @@ function App(): JSX.Element {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/" element={<Navigate replace={true} to="/home" />} />
+          <Route path="*" element={<Navigate replace={true} to="/home" />} />
         </Routes>
       </div>
     </BrowserRouter>
