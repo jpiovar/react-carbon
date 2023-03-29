@@ -2,6 +2,7 @@ import './Home.scss';
 // import { Button } from '@carbon/react';
 import { Add } from '@carbon/react/icons';
 import React from 'react';
+import { Button } from 'carbon-components-react';
 
 const Home = (): JSX.Element => {
 
