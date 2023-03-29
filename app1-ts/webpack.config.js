@@ -1,27 +1,29 @@
-var path = require('path');
+import { resolve } from 'path';
 
-module.exports = {
-  entry: './app/entry', // string | object | array
-  // Here the application starts executing
-  // and webpack starts bundling
-  output: {
-    // options related to how webpack emits results
-    path: path.resolve(__dirname, 'dist'), // string
-    // the target directory for all output files
-    // must be an absolute path (use the Node.js path module)
-    filename: 'bundle.js', // string
-    // the filename template for entry chunks
-  },
-  module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [{
-        loader: 'style-loader'
-      }, {
-        loader: 'css-loader'
-      }, {
-        loader: 'sass-loader'
-      }]
+export const entry = './app/entry';
+export const output = {
+  // options related to how webpack emits results
+  path: resolve(__dirname, 'dist'),
+
+
+  // the target directory for all output files
+  // must be an absolute path (use the Node.js path module)
+  filename: 'bundle.js', // string
+};
+export const module = {
+  rules: [{
+    test: /\.scss$/,
+    use: [{
+      loader: 'style-loader'
+    }, {
+      loader: 'css-loader'
+    }, {
+      loader: 'sass-loader',
+      options: {
+        sassOptions: {
+          includePaths: ['node_modules']
+        }
+      }
     }]
-  }
-}
+  }]
+};
