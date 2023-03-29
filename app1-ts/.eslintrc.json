@@ -53,6 +53,6 @@
             "allowExpressions": true
           }
         ],
-        "max-len": ["warn", { "code": 80 }]
+        "max-len": ["warn", { "code": 120 }]
     }
 }
