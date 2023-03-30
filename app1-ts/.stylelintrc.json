@@ -31,6 +31,7 @@
         ]
       }
     ],
+    "scss/at-mixin-argumentless-call-parentheses": null,
     "font-family-no-missing-generic-family-keyword": [
       true,
       {
@@ -130,7 +131,6 @@
     "string-no-newline": true,
     "unit-no-unknown": true,
     "property-no-unknown": true,
-    "no-irregular-whitespace": true,
-    "scss/at-mixin-argumentless-call-parentheses": null
+    "no-irregular-whitespace": true
   }
 }
