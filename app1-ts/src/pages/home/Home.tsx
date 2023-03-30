@@ -6,7 +6,71 @@ import { Button } from 'carbon-components-react';
 
 import { Grid, Column } from '@carbon/react';
 
+import { DataTable } from 'carbon-components-react';
+import AboutTable from '../../shared/components/AboutTable';
+
+
+
+
 const Home = (): JSX.Element => {
+
+  const headers = [
+    {
+      key: 'name',
+      header: 'Name',
+    },
+    {
+      key: 'createdAt',
+      header: 'Created',
+    },
+    {
+      key: 'updatedAt',
+      header: 'Updated',
+    },
+    {
+      key: 'issueCount',
+      header: 'Open Issues',
+    },
+    {
+      key: 'stars',
+      header: 'Stars',
+    },
+    {
+      key: 'links',
+      header: 'Links',
+    },
+  ];
+  const rows = [
+    {
+      id: '1',
+      name: 'Resource 1',
+      createdAt: 'Date',
+      updatedAt: 'Date',
+      issueCount: '123',
+      stars: '456',
+      links: 'Links',
+    },
+    {
+      id: '2',
+      name: 'Resource 2',
+      createdAt: 'Date',
+      updatedAt: 'Date',
+      issueCount: '123',
+      stars: '456',
+      links: 'Links',
+    },
+    {
+      id: '3',
+      name: 'Resource 3',
+      createdAt: 'Date',
+      updatedAt: 'Date',
+      issueCount: '123',
+      stars: '456',
+      links: 'Links',
+    },
+  ];
+
+
 
   const shoot = (): void => {
     console.log('Great Shot!');
@@ -19,8 +83,8 @@ const Home = (): JSX.Element => {
         <Add />
         <Button onClick={shoot}><Add />content load</Button>
       </div>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <div>
         <Grid className="landing-page" fullWidth>
           <Column lg={16} md={8} sm={4} className="landing-page__banner">
@@ -53,6 +117,11 @@ const Home = (): JSX.Element => {
             </Grid>
           </Column>
         </Grid>
+      </div>
+      <br />
+      <br />
+      <div>
+        <AboutTable headers={headers} rows={rows} />        
       </div>
     </div>
   );
