@@ -1,3 +1,5 @@
+
+
 @use '@carbon/react/scss/compat/themes' as compat;
 @use '@carbon/react/scss/themes';
 @use '@carbon/react/scss/theme' with (
@@ -9,6 +11,11 @@
 :root {
   @include theme.theme();
 }
+
+// @import 'carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
+// @import 'carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss';
+// @import 'carbon-components/scss/globals/scss/typography.scss';
+// @import 'carbon-components/scss/globals/scss/vars.scss';
 
 body {
   margin: 0;
