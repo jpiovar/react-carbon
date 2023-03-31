@@ -5,6 +5,7 @@ import React from 'react';
 import { Button } from 'carbon-components-react';
 import { Grid, Column } from '@carbon/react';
 import Table1 from '../../shared/components/Table1';
+import TableSort from '../../shared/components/TableSort';
 
 
 
@@ -43,7 +44,7 @@ const Home = (): JSX.Element => {
       createdAt: 'Date',
       updatedAt: 'Date',
       issueCount: '123',
-      stars: '456',
+      stars: '455',
       links: 'Links',
     },
     {
@@ -136,6 +137,9 @@ const Home = (): JSX.Element => {
       <br />
       <div>
         <Table1 headers={headers} rows={rows} />        
+      </div>
+      <div>
+        <TableSort headers={headers} rows={rows} />        
       </div>
     </div>
   );
