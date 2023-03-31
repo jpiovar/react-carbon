@@ -6,6 +6,7 @@ import { Button } from 'carbon-components-react';
 import { Grid, Column } from '@carbon/react';
 import Table1 from '../../shared/components/Table1';
 import TableSort from '../../shared/components/TableSort';
+import TableSelectSort from '../../shared/components/TableSelectSort';
 
 
 
@@ -140,6 +141,9 @@ const Home = (): JSX.Element => {
       </div>
       <div>
         <TableSort headers={headers} rows={rows} />        
+      </div>
+      <div>
+        <TableSelectSort headers={headers} rows={rows} />        
       </div>
     </div>
   );
