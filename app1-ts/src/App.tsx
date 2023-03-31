@@ -10,13 +10,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Loading } from 'carbon-components-react';
 import { getUserFetch } from './state/user/user.actions';
 import { getUserRequest } from './state/user/user.thunks';
+import { SpinnerType } from './state/spinner/spinner.types';
 
 function App(): JSX.Element {
 
   const dispatch = useDispatch();
 
   const user = useSelector((state: any) => state.userReducer.user);
-  const spinner = useSelector((state: any) => state.spinnerReducer.isOn);
+  const spinner = useSelector((state: { spinnerReducer: SpinnerType }) => state.spinnerReducer.isOn);
 
   const [spinnerLoader, setSpinnerLoader] = useState(false);
 

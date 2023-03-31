@@ -16,8 +16,7 @@ import {
   TableExpandedRow,
 } from 'carbon-components-react';
 
-// eslint-disable-next-line react/prop-types
-const AboutTable = ({ rows, headers }): JSX.Element => {
+const Table1 = ({ rows, headers }): JSX.Element => {
   return (
     <DataTable
       rows={rows}
@@ -64,4 +63,4 @@ const AboutTable = ({ rows, headers }): JSX.Element => {
   );
 };
 
-export default AboutTable;
+export default Table1;

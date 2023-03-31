@@ -2,12 +2,9 @@ import './Home.scss';
 // import { Button } from '@carbon/react';
 import { Add } from '@carbon/react/icons';
 import React from 'react';
-import { Button , DataTable } from 'carbon-components-react';
-
+import { Button } from 'carbon-components-react';
 import { Grid, Column } from '@carbon/react';
-
-import AboutTable from '../../shared/components/AboutTable';
-
+import Table1 from '../../shared/components/Table1';
 
 
 
@@ -138,7 +135,7 @@ const Home = (): JSX.Element => {
       <br />
       <br />
       <div>
-        <AboutTable headers={headers} rows={rows} />        
+        <Table1 headers={headers} rows={rows} />        
       </div>
     </div>
   );
