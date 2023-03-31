@@ -34,7 +34,7 @@ const Home = (): JSX.Element => {
     {
       key: 'links',
       header: 'Links',
-    },
+    }
   ];
   const rows = [
     {

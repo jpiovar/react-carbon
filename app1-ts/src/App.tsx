@@ -91,6 +91,7 @@ function App(): JSX.Element {
             <Route path="/about" element={<About />} />
             <Route path="/" element={<Navigate replace={true} to="/home" />} />
             <Route path="*" element={<Navigate replace={true} to="/home" />} />
+            <Route path="/about/*" element={<Navigate replace={true} to="/about" />} />
           </Routes>
         </div>
       </div>
