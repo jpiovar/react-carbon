@@ -15,6 +15,7 @@
     "eslint:fix": "npx eslint src/**/*.tsx --quiet --fix"
   },
   "dependencies": {
+    "@carbon/grid": "^11.12.0",
     "@carbon/icons-react": "^11.17.0",
     "@carbon/react": "^1.25.0",
     "@reduxjs/toolkit": "^1.9.3",

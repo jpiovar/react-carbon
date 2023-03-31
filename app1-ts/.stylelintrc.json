@@ -131,6 +131,7 @@
     "string-no-newline": true,
     "unit-no-unknown": true,
     "property-no-unknown": true,
-    "no-irregular-whitespace": true
+    "no-irregular-whitespace": true,
+    "operator-no-unspaced": false
   }
 }

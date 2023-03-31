@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import logo from './assets/images/logo.svg';
 import './App.scss';
-import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes , HashRouter as Router } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import { startSpinner, stopSpinner } from './state/spinner/spinner.actions';

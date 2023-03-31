@@ -2,11 +2,10 @@ import './Home.scss';
 // import { Button } from '@carbon/react';
 import { Add } from '@carbon/react/icons';
 import React from 'react';
-import { Button } from 'carbon-components-react';
+import { Button , DataTable } from 'carbon-components-react';
 
 import { Grid, Column } from '@carbon/react';
 
-import { DataTable } from 'carbon-components-react';
 import AboutTable from '../../shared/components/AboutTable';
 
 
@@ -85,6 +84,24 @@ const Home = (): JSX.Element => {
       </div>
       <br />
       <br />
+      <div>
+        <div className="bx--grid bx--grid--full-width landing-page">
+          <div className="bx--row landing-page__banner">
+            <div className="bx--col-lg-16">1ok</div>
+          </div>
+          <div className="bx--row landing-page__r2">
+            <div className="bx--col-md-4 bx--col-lg-7">7/16</div>
+            <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">8/16</div>
+          </div>
+          <div className="bx--row landing-page__r3">
+            <div className="bx--col-md-4 bx--col-lg-4">1/4</div>
+            <div className="bx--col-md-4 bx--col-lg-4">1/4</div>
+            <div className="bx--col-md-4 bx--col-lg-4">1/4</div>
+            <div className="bx--col-md-4 bx--col-lg-4">1/4</div>
+          </div>
+        </div>
+      </div>
+      <br/><br/>
       <div>
         <Grid className="landing-page" fullWidth>
           <Column lg={16} md={8} sm={4} className="landing-page__banner">

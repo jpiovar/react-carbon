@@ -1,21 +1,24 @@
-
-
-@use '@carbon/react/scss/compat/themes' as compat;
-@use '@carbon/react/scss/themes';
-@use '@carbon/react/scss/theme' with (
-  $fallback: compat.$g100,
-  $theme: themes.$g100
-);
+// @use '@carbon/react/scss/compat/themes' as compat;
+// @use '@carbon/react/scss/themes';
+// @use '@carbon/react/scss/theme' with (
+//   $fallback: compat.$g100,
+//   $theme: themes.$g100
+// );
 @use '@carbon/react';
 
+$feature-flags: (
+  grid-columns-16: true
+);
+
 :root {
-  @include theme.theme();
+  // @include theme.theme();
 }
 
-@import 'carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
-@import 'carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss';
-@import 'carbon-components/scss/globals/scss/typography.scss';
-@import 'carbon-components/scss/globals/scss/vars.scss';
+@import 'carbon-components/scss/globals/scss/styles';
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family';
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint';
+@import 'carbon-components/scss/globals/scss/typography';
+@import 'carbon-components/scss/globals/scss/vars';
 
 body {
   margin: 0;
