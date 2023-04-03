@@ -9,6 +9,7 @@ import TableSort from '../../shared/components/TableSort';
 import TableSelectSort from '../../shared/components/TableSelectSort';
 
 
+const Elementa = (): JSX.Element  => <span>good tElementA</span>;
 
 const Home = (): JSX.Element => {
 
@@ -74,9 +75,17 @@ const Home = (): JSX.Element => {
     console.log('Great Shot!');
   };
 
+  const tElement = (): any =>  <><span>tElement</span></>; 
+
+  const Elementb = (): any =>  <><span>Elementb</span></>; 
+
+
   return (
     <div>
       <h1 id="home">home page</h1>
+      {tElement()}
+      <br/><br/>
+      <Elementa/><Elementb/>
       <div>
         <Add />
         <Button onClick={shoot}><Add />content load</Button>
