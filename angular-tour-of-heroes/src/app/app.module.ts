@@ -9,7 +9,7 @@ import { Store, StoreModule } from '@ngrx/store';
 
 import { EffectsModule } from '@ngrx/effects';
 
-import { reducers } from './state';
+import { effects, reducers } from './state';
 import { UserEffects } from './state/user/user.effects';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,9 +25,7 @@ import { CoreModule } from './core/core.module';
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),    
-    EffectsModule.forRoot([
-     UserEffects
-    ]),
+    EffectsModule.forRoot(effects),
     StoreDevtoolsModule.instrument({
       name: 'NgRx tracker state', logOnly: isDevMode()
     }),

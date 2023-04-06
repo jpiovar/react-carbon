@@ -4,6 +4,7 @@ import { SpinnerState } from './spinner/spinner.models';
 import { reducer as spinner } from './spinner/spinner.reducer';
 import { reducer as user } from './user/user.reducer';
 import { UserState } from './user/user.models';
+import { UserEffects } from './user/user.effects';
 
 export const rootReducer = {};
 
@@ -16,3 +17,6 @@ export const reducers: ActionReducerMap<AppState, any> = {
   spinner,
   user
 };
+
+
+export const effects: any[] = [UserEffects];
