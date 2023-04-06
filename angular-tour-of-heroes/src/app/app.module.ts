@@ -29,7 +29,7 @@ import { CoreModule } from './core/core.module';
      UserEffects
     ]),
     StoreDevtoolsModule.instrument({
-      name: 'NgRx tracker state', logOnly: environment.production
+      name: 'NgRx tracker state', logOnly: isDevMode()
     }),
 
   ],
