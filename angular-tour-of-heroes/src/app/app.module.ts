@@ -15,8 +15,11 @@ import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { NavigationActionTiming, StoreRouterConnectingModule } from '@ngrx/router-store';
-import { CustomSerializer, MergedRouterStateSerializer } from './shared/utils/routerStateSerializer';
+
 import { SharedModule } from './shared/shared.module';
+import { NgrxRouterStoreModule } from './state/router/ngrx-router.module';
+import { MergedRouterStateSerializer } from './state/router/routerStateSerializer';
+// import { MergedRouterStateSerializer } from './state/router/merged-route-serialzer';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
+    NgrxRouterStoreModule,
     CoreModule,
     SharedModule,
     HttpClientModule,

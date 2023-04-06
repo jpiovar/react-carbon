@@ -1,5 +1,5 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { StoreRouterConnectingModule, routerReducer, RouterStateSerializer, NavigationActionTiming } from '@ngrx/router-store';
+import { routerReducer } from '@ngrx/router-store';
 
 import { SpinnerState } from './spinner/spinner.models';
 import { reducer as spinner } from './spinner/spinner.reducer';
