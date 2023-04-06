@@ -9,8 +9,11 @@ import { Store, StoreModule } from '@ngrx/store';
 
 import { EffectsModule } from '@ngrx/effects';
 
-import { reducer as spinner } from './state/spinner/spinner.reducer';
 import { reducers } from './state';
+import { UserEffects } from './state/user/user.effects';
+import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,15 @@ import { reducers } from './state';
   ],
   imports: [
     BrowserModule,
+    CoreModule,
+    HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),    
+    EffectsModule.forRoot([
+     UserEffects
+    ]),
     StoreDevtoolsModule.instrument({
-      name: 'NgRx tracker state', logOnly: true
+      name: 'NgRx tracker state', logOnly: environment.production
     }),
 
   ],
