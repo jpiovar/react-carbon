@@ -1,4 +1,5 @@
 import { ActionReducerMap } from '@ngrx/store';
+import { StoreRouterConnectingModule, routerReducer, RouterStateSerializer, NavigationActionTiming } from '@ngrx/router-store';
 
 import { SpinnerState } from './spinner/spinner.models';
 import { reducer as spinner } from './spinner/spinner.reducer';
@@ -9,11 +10,13 @@ import { UserEffects } from './user/user.effects';
 export const rootReducer = {};
 
 export interface AppState {
+  readonly router?: any;
   readonly spinner: SpinnerState;
   readonly user: UserState;
 }
 
 export const reducers: ActionReducerMap<AppState, any> = {
+  router: routerReducer,
   spinner,
   user
 };
