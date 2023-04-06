@@ -19,35 +19,35 @@ export class AppComponent implements OnDestroy, OnInit {
     private store: Store<AppState>
   ) {
     this.subscriptionsData();
-}
+  }
 
-ngOnInit(): void {
-  debugger;
-  this.triggerUserLoad();
-}
+  ngOnInit(): void {
+    debugger;
+    this.triggerUserLoad();
+  }
 
-triggerUserLoad(): void {
-  const url = environment.origin;
-  this.store.dispatch(new StartSpinner());
-  this.store.dispatch(new UserLoad(url));
-}
+  triggerUserLoad(): void {
+    const url = environment.origin;
+    this.store.dispatch(new StartSpinner());
+    this.store.dispatch(new UserLoad(url));
+  }
 
-subscriptionsData(): void {
-  this.subscriptions.add(
-    this.store.select('user').subscribe(res => {
-      debugger;
-      if (res?.data) {
-        console.log('res data', res?.data);
-        this.store.dispatch(new StopSpinner());
-      }
-        
-      
-    })
-  );
-}
+  subscriptionsData(): void {
+    this.subscriptions.add(
+      this.store.select('user').subscribe(res => {
+        debugger;
+        if (res?.data) {
+          console.log('res data', res?.data);
+          this.store.dispatch(new StopSpinner());
+        }
 
-ngOnDestroy(): void {
-  this.subscriptions.unsubscribe();
-}
-  
+
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+  }
+
 }
