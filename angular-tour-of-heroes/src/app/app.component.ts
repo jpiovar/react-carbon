@@ -12,33 +12,42 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy, OnInit {
-  subscription: Subscription = new Subscription();
+  subscriptions: Subscription = new Subscription();
   title = 'angular-tour-of-heroes';
-  
+
   constructor(
     private store: Store<AppState>
   ) {
-    store.select('user').subscribe(res => {
-      setTimeout(() => {
-        store.dispatch(new StopSpinner());
-      }, 5000);
+    this.subscriptionsData();
+}
+
+ngOnInit(): void {
+  debugger;
+  this.triggerUserLoad();
+}
+
+triggerUserLoad(): void {
+  const url = environment.origin;
+  this.store.dispatch(new StartSpinner());
+  this.store.dispatch(new UserLoad(url));
+}
+
+subscriptionsData(): void {
+  this.subscriptions.add(
+    this.store.select('user').subscribe(res => {
+      debugger;
+      if (res?.data) {
+        console.log('res data', res?.data);
+        this.store.dispatch(new StopSpinner());
+      }
+        
       
-    });
-  }
-  
-  ngOnInit(): void {
-    debugger;
-    const url = environment.origin;
+    })
+  );
+}
 
-    this.store.dispatch(new StartSpinner());
-    this.store.dispatch(new UserLoad(url));
-
-
-
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
+ngOnDestroy(): void {
+  this.subscriptions.unsubscribe();
+}
   
 }
